@@ -15,7 +15,7 @@ pipeline {
           sh 'docker push $DOCKER_BFLASK_IMAGE'
         }
         script {
-            sh "docker run -p 8080:8080 -d $DOCKER_BFLASK_IMAGE"
+            sh "docker run -p 4000:4000 -d $DOCKER_BFLASK_IMAGE"
       }
     }
   }
