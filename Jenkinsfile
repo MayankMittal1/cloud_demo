@@ -16,6 +16,7 @@ pipeline {
         }
         script {
             sh "docker run -p 4000:4000 -d $DOCKER_BFLASK_IMAGE"
+        }
       }
     }
   }
