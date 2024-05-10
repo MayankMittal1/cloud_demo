@@ -15,7 +15,7 @@ pipeline {
           sh 'docker push $DOCKER_BFLASK_IMAGE'
         }
         script {
-            sh "docker stop \$5(docker ps -a -q)"
+            sh """docker stop $(docker ps -a -q)"""
             sh "docker run -p 4000:4000 -d $DOCKER_BFLASK_IMAGE"
         }
       }
