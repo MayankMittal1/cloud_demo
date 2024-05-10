@@ -27,8 +27,8 @@ jobs:
           working-directory: /home/ubuntu
           # Bash commands you want to execute
           command: |
-            sudo docker-compose stop
-            sudo docker-compose rm -f
-            sudo docker-compose pull
-            sudo docker-compose up -d
+            sudo docker compose stop
+            sudo docker compose rm -f
+            sudo docker compose pull
+            sudo docker compose up -d
             sudo docker image prune -af
