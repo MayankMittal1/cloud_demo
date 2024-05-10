@@ -14,6 +14,8 @@ pipeline {
           sh "echo \$DOCKER_PASSWORD | docker login -u \$DOCKER_USERNAME --password-stdin docker.io"
           sh 'docker push $DOCKER_BFLASK_IMAGE'
         }
+        script {
+            sh "docker run -p 8080:8080 -d $DOCKER_BFLASK_IMAGE"
       }
     }
   }
