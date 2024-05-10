@@ -16,6 +16,7 @@ pipeline {
         }
         script {
             sh "docker stop cloud_demo_container"
+            sh "docker rm cloud_demo_container"
             sh "docker run -p 4000:4000 --name cloud_demo_container -d $DOCKER_BFLASK_IMAGE"
         }
       }
