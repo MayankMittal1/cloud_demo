@@ -4,7 +4,7 @@ dotenv.config();
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Cloud Run is working yayay!');
+  res.send('Cloud Run is working!');
 })
 
 app.listen(4000, () => {
